@@ -1,0 +1,73 @@
+%\documentclass[12pt]{article}
+\documentclass[Lau,oneside,italian]{sapthesis}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[sorting=none]{biblatex}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{makeidx}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[outline]{contour} % http://ctan.org/pkg/contour
+\makeindex
+
+
+%\addbibresource{article.bib}
+\addbibresource{biblio.bib}
+
+
+%\title{FloodNet: Deep Learning applicato a immagini aeree}
+\title{Approccio basato su Deep Learning per la Segmentazione Semantica di Immagini Aeree}
+\author{William De Vena}
+\date{2022}
+
+\renewcommand*\contentsname{Indice}
+
+
+\begin{document}
+
+\IDnumber{1862820}
+\course{Informatica} 
+\courseorganizer{Facoltà di Ingegneria dell’Informazione, Informatica e Statistica}
+\AcademicYear{2021-2022}
+
+
+\advisor{Prof. Danilo Avola} 
+%\customadvisorlabel{Responsabile}
+
+
+\coadvisor{Prof. Luigi Cinque} \coadvisor{Dott. Alessio Fagioli}
+%\customcoadvisorlabel{Corresponsabile} 
+
+\examdate{.} 
+
+\authoremail{william98wdv@gmail.com}
+\copyyear{2022} 
+
+
+
+
+\maketitle
+
+%\dedication{GRAZIE}
+
+%\abstract{ABSTRACT}
+
+%\chapter{Introduzione}
+
+\tableofcontents
+
+\include{chapters/1_Introduzione}
+\include{chapters/2_Segmentazione}
+\include{chapters/3_DeepLearning}
+\include{chapters/4_Architettura}
+\include{chapters/5_Experiments}
+\include{chapters/6_Conclusion}
+
+
+\printbibliography
+\printindex
+
+\end{document}

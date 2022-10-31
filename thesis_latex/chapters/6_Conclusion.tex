@@ -1,0 +1,36 @@
+\chapter{Conclusioni}
+\label{chap_conclusion}
+In questo elaborato si è presentato un approccio basato su strategie di Deep Learning per la segmentazione semantica delle immagini del dataset FloodNet. In particolare, l'approccio sviluppato si è basato soprattutto su: un'architettura di Deep Learning context-based mai utilizzata su questo dataset, ovvero la DeepLabV3; una fase di data cleaning con cui è stata affrontata la presenza di errori nelle maschere del dataset; e infine su una fase di data augmentation offline, che ha avuto l'obiettivo di aumentare in modo mirato il numero di immagini, ma anche di far fronte ad altre difficoltà incontrate nell'affrontare questo task (Paragrafo \ref{difficolta_ds}). I risultati ottenuti dimostrano l'efficacia del metodo proposto, con risultati che sono prossimi a quelli dello stato dell'arte a causa delle seguenti ragioni:
+
+\begin{itemize}
+    \item Come menzionato nel Paragrafo \ref{risorse_comp}, vi sono stati consistenti limitazioni dal punto di vista delle risorse computazionali. In particolare, queste limitazioni hanno portato a lunghi tempi di overhead, che hanno prorogato di molto il tempo totale degli esperimenti, condizionando inevitabilmente i risultati ottenuti. Ad esempio, l'ultimo esperimento effettuato, che è stato anche il più corposo, con una disponibilità continua delle stesse risorse hardware utilizzate, si sarebbe concluso in circa 14/15 giorni, a differenza dei circa 60 giorni che invece ha impiegato.
+    
+    
+    \item Per quanto riguarda il dataset, la versione qui utilizzata presenta 2343 immagini, a fronte delle 3200 (+36\%) del lavoro dello stato dell'arte con cui si sono confrontati i risultati. Dunque, anche questo fattore è da considerarsi limitante ai fini della valutazione dei risultati.
+    
+    
+    \item  Il paragone con l'architettura DeepLabV3+ (Paragrafo \ref{comparison}), molto simile alla DeepLabV3 utilizzata in questo lavoro, considerando anche tutti i limiti menzionati nei punti precedenti, evidenzia ulteriormente la bontà dell'approccio sviluppato. In particolare, anche se la mIoU risulta leggermente più bassa (0.564 contro 0.61), le IoU di ben tre classi, ovvero "edificio allagato", "veicolo" e "piscina" risultano più alte (rispettivamente 0.41 contro 0.32; 0.49 contro 0.42; 0.52 contro 0.47). Inoltre, va considerato che le tre classi precedentemente menzionate, nelle quali si sono ottenuti tali miglioramenti, rappresentano tre delle quattro classi più difficoltose.
+    
+\end{itemize}
+
+In conclusione, tenendo conto di tutti questi fattori, l'approccio sviluppato e i suoi risultati, sono da considerarsi più che validi. In particolare, le metodologie utilizzate, soprattutto la data augmentation offline e la fase di pulizia del dataset, hanno apportato un consistente contributo e applicandole ad altri modelli, con risorse più adeguate e tempistiche più distese, potrebbero migliorare i risultati dello stato dell'arte.
+
+
+
+
+
+\section{Sviluppi futuri}
+Gli sviluppi futuri che potrebbero essere apportati al nostro approccio sono:
+
+\begin{itemize}
+
+    \item Reinserire le 45 immagini scartate durante la fase di data cleaning, riuscendo a correggerle attraverso tool come ad esempio la piattaforma V7 Darwin.
+
+    \item Aumento della quantità di data augmentation offline applicata al dataset. In particolare, visti i miglioramenti apportati dall'aggiunta di immagini, attraverso sia la fase di data cleaning sia la fase di data augmentation, e visto che dopo queste due fasi il dataset presentava ancora sbilanciamenti, anche se più lievi, una fase di data augmentation offline ancora più corposa potrebbe portare ulteriori miglioramenti.
+    
+    \item Oltre all'aumento dal punto di vista della quantità, si potrebbero aggiungere altre tecniche di data augmentation, come ad esempio le tecniche descritte in \cite{small_obj}, utili soprattutto a migliorare le performance sulle classi rappresentate da oggetti piccoli, come "veicolo" e "piscina".
+    
+    
+%    \item Esplorazione di altre architetture, che nello stato dell'arte sono risultate promettenti. Come ad esempio, l'AttentionUnet utilizzata in \cite{rescuenet}.
+    
+\end{itemize}
