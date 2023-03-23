@@ -1,7 +1,7 @@
 # Deep Learning based approach for Semantic Segmentation of flood event Aerial images
 Bachelor's Thesis (2021/2022)
 
-![My Image](example_segme.jpg)
+![My Image](example_segme.png)
 
 Semantic segmentation of the aerial images in the FloodNet dataset (https://github.com/BinaLab/FloodNet-Supervised_v1.0).
 
