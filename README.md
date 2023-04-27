@@ -1,5 +1,5 @@
 # Deep Learning based approach for Semantic Segmentation of flood event Aerial images
-Bachelor's Thesis (2021/2022)
+BSc Final Project (2021/2022)
 
 ![My Image](example_segme.png)
 
